@@ -1,0 +1,31 @@
+/* Defaults */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Imports */
+@font-face {
+    font-family: 'Dimitri';
+    src: url('../font/dimis.ttf');
+}
+
+@font-face {
+    font-family: 'Dimitri2';
+    src: url('../font/dimitri.ttf');
+}
+
+/* Main */
+#main {
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-family: 'Dimitri', sans-serif;
+    font-size: 5em;
+}
+
+/* Footer */
+#footer {
+    font-family: 'Dimitri2', sans-serif;
+}
