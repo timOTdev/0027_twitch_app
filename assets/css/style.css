@@ -25,6 +25,23 @@ h1 {
     font-size: 5em;
 }
 
+/* Status */
+
+/* Channels */
+#channels {
+    display: flex;
+    justify-content: center;
+}
+
+#channels h1 {
+    font-size: 3em;
+}
+.channels {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+
 /* Footer */
 #footer {
     font-family: 'Dimitri2', sans-serif;
