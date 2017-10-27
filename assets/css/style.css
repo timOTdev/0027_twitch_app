@@ -36,10 +36,19 @@ h1 {
 #channels h1 {
     font-size: 3em;
 }
+
 .channels {
     border: 1px solid black;
     padding: 1em;
     margin: 1em;
+}
+
+.online {
+    background: green;
+}
+
+.offline {
+    background: red;
 }
 
 /* Footer */
