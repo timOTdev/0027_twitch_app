@@ -9,8 +9,7 @@ window.onload = function() {
     function addChannels(data) {
         const name = data.display_name;
         const game = data.game;
-        const logo = data.logo;
-        const offlineLogo = "https://static-cdn.jtvnw.net/jtv_user_pictures/dd542e0da09855b6-profile_image-300x300.jpeg";
+        const logo = data.logo ? data.logo : "https://static-cdn.jtvnw.net/jtv_user_pictures/dd542e0da09855b6-profile_image-300x300.jpeg";
         const topic = data.status;
         const url = data.url;
         const views = data.views;
@@ -38,7 +37,7 @@ window.onload = function() {
                     <div id="${name}-channel" class="offline">
                         <h1 id="${name}-name">${name}</h1>
                         <h2 id="${game}-game">${game}</h2>
-                        <img src="${offlineLogo}"></img>
+                        <img src="${logo}"></img>
                         <h2 id="live">Offline</h2>
                         <h3 id="${topic}">No current stream</h3>
                     </div>
