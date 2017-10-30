@@ -31,11 +31,11 @@ h1 {
 #channels {
     display: flex;
     justify-content: space-around;
-    
 }
 
 #channels > * {
     flex: 1;
+    max-width: 20%;
     padding: 1em;
     margin: 1em;
 }
@@ -58,6 +58,10 @@ h1 {
 
 .offline {
     background: red;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Footer */
