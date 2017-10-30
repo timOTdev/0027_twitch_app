@@ -1,7 +1,6 @@
 window.onload = function() {
     const channels = document.getElementById("channels");
     const channelArr = ["esl_sc2", "freecodecamp", "twitchpresents", "div_io"];
-    
     // Add channels
     function addChannels(data) {
         const name = data.display_name;
@@ -23,9 +22,9 @@ window.onload = function() {
             if (response.stream) {
                 content += `<div class="online">
                     <a href=${url} target="_blank">
-                        <h1 id="${name}-name">${name}</h1>
-                        <h2 id="${game}-game">${game}</h2>
+                        <h2 id="${name}-name" class="channel-header">${name}</h2>
                         <img src="${logo}"></img>
+                        <h2 id="${game}-game">${game}</h2>
                         <h2 id="live">Online</h2>
                         <h3 id="${topic}">${topic}</h3>
                     </a>
@@ -34,9 +33,9 @@ window.onload = function() {
             else {
                 content += `<div class="offline">
                     <a href=${url} target="_blank">
-                        <h1 id="${name}-name">${name}</h1>
-                        <h2 id="${game}-game">${game}</h2>
+                        <h2 id="${name}-name" class="channel-header">${name}</h2>
                         <img src="${logo}"></img>
+                        <h2 id="${game}-game">${game}</h2>
                         <h2 id="live">Offline</h2>
                         <h3 id="${topic}">No current stream</h3>
                     </a>
@@ -53,9 +52,14 @@ window.onload = function() {
             const offlineButton = document.getElementById("offline-button");
             const onlineChannels = document.querySelectorAll("div.online");
             const offlineChannels = document.querySelectorAll("div.offline");
-            
+            allButton.classList.add("active");
+
             // Filter all channels
             allButton.addEventListener("click", function() {
+                allButton.classList.add("active");
+                onlineButton.classList.remove("active");
+                offlineButton.classList.remove("active");
+
                 for (const channel of onlineChannels) {
                     channel.classList.remove("hidden");
                 }
@@ -66,6 +70,10 @@ window.onload = function() {
 
             // Filter online channels
             onlineButton.addEventListener("click", function() {
+                allButton.classList.remove("active");
+                onlineButton.classList.add("active");
+                offlineButton.classList.remove("active");
+
                 for (const channel of onlineChannels) {
                     channel.classList.remove("hidden");
                 }
@@ -76,6 +84,10 @@ window.onload = function() {
             
             // Filter offline channels
             offlineButton.addEventListener("click", function() {
+                allButton.classList.remove("active");
+                onlineButton.classList.remove("active");
+                offlineButton.classList.add("active");
+
                 for (const channel of onlineChannels) {
                     channel.classList.add("hidden");
                 }
