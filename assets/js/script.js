@@ -1,6 +1,8 @@
 window.onload = function() {
     const channels = document.getElementById("channels");
-    const channelArr = ["esl_sc2", "freecodecamp", "twitchpresents", "div_io"];
+    const channelArr = ["esl_sc2", "div_io", "freecodecamp", "thepetcollective", "twitchpresents"];
+    let channelsURL = "https://wind-bow.glitch.me/twitch-api/channels/";
+
     // Add channels
     function addChannels(data) {
         const name = data.display_name;
@@ -57,8 +59,8 @@ window.onload = function() {
             // Filter all channels
             allButton.addEventListener("click", function() {
                 allButton.classList.add("active");
-                onlineButton.classList.remove("active");
-                offlineButton.classList.remove("active");
+                const removeOnline = onlineButton.classList.remove("active");
+                const removeOffline =offlineButton.classList.remove("active");
 
                 for (const channel of onlineChannels) {
                     channel.classList.remove("hidden");
