@@ -79,6 +79,7 @@ button:focus {
 }
 
 #channels img {
+    border: 5px solid white;
     border-radius: 50%; 
 }
 .channel-header {
@@ -102,6 +103,10 @@ button:focus {
     background: lightcoral;
 }
 
+.online img {
+    background: red;
+}
+
 .hidden {
     display: none;
 }
@@ -109,4 +114,201 @@ button:focus {
 /* Footer */
 #footer {
     font-family: 'Dimitri2', sans-serif;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1560px) {
+    #header h1 {
+        font-size: 3em;
+    }
+    #channels {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #channels > * {
+        flex: 1 1 auto;
+        max-width: 30%;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 5%;
+        transition: all ease 0.3s;
+    }
+    #channels h2 {
+        font-size: 1.5em;
+    }
+    #channels h3 {
+        font-size: 1.5em;
+    }
+    #channels img {
+        border: 2px solid white;
+        border-radius: 50%;
+        max-width: 50%;
+    }
+    .channel-header {
+        font-family: 'Dimitri', sans-serif;
+        font-size: 1em;
+    }
+    button {
+        font-size: large;
+        background: black;
+        border: 1px solid white;
+        color: white;
+    }
+    button:hover {
+        font-size: large;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #header h1 {
+        font-size: 3em;
+    }
+    #channels {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #channels > * {
+        flex: 1 1 auto;
+        max-width: 60%;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 5%;
+        transition: all ease 0.3s;
+    }
+    #channels h2 {
+        font-size: 1.5em;
+    }
+    #channels h3 {
+        font-size: 1.5em;
+    }
+    #channels img {
+        border: 2px solid white;
+        border-radius: 50%;
+        max-width: 50%;
+    }
+    .channel-header {
+        font-family: 'Dimitri', sans-serif;
+        font-size: 1em;
+    }
+    button {
+        font-size: large;
+        background: black;
+        border: 1px solid white;
+        color: white;
+    }
+    button:hover {
+        font-size: large;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #header h1 {
+        font-size: 1em;
+    }
+    #channels {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #channels > * {
+        flex: 1 1 auto;
+        max-width: 40%;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 5%;
+        transition: all ease 0.3s;
+    }
+    #channels h2 {
+        font-size: 1.25em;
+    }
+    #channels h3 {
+        font-size: 1.25em;
+    }
+    #header h1 {
+        font-family: 'Dimitri', sans-serif;
+        font-size: 2em;
+        color: white;
+    }
+    #channels img {
+        border: 2px solid white;
+        border-radius: 50%;
+        max-width: 50%;
+    }
+    .channel-header {
+        font-family: 'Dimitri', sans-serif;
+        font-size: 0.5em;
+    }
+    button {
+        font-size: medium;
+        background: black;
+        border: 1px solid white;
+        color: white;
+    }
+    button:hover {
+        font-size: medium;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5em;
+    }
+    #channels {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #channels > * {
+        flex: 1 1 auto;
+        max-width: 100%;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 5%;
+        transition: all ease 0.3s;
+    }
+    #channels h2 {
+        font-size: 1em;
+    }
+    #channels h3 {
+        font-size: 1em;
+    }
+    #channels img {
+        border: 2px solid white;
+        border-radius: 50%;
+        max-width: 50%;
+    }
+    .channel-header {
+        font-family: 'Dimitri', sans-serif;
+        font-size: 0.15em;
+    }
+    .channel-header a h2 {
+        font-size: 1em;
+    }
+    button {
+        font-size: small;
+        background: black;
+        border: 1px solid white;
+        color: white;
+    }
+    button:hover {
+        font-size: small;
+    }
 }
